@@ -54,7 +54,7 @@
 
 .hero-title {
     @include font-param (26px, 1.62, 900, 0.06em);
-   
+
     text-transform: uppercase;
     color: $bgc-main;
 
