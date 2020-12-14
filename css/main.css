@@ -250,6 +250,10 @@ header {
   position: relative;
 }
 
+.header {
+  border-bottom: 1px solid #ECECEC;
+}
+
 .header-nav {
   display: flex;
   align-items: center;
