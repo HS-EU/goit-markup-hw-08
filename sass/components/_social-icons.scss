@@ -1,0 +1,39 @@
+.social-icons {
+    // display: flex;
+    // justify-content: center;
+    @include flex-center(flex);
+}
+
+.social-icons-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-icons-link {
+    @include flex-center(flex);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: $bgc-main;
+    fill: $logo-color;
+    
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+        fill: $bgc-main;
+    }
+}
+
+.social-icons-svg {
+    width: 20px;
+    height: 20px;   
+}
+
+footer .social-icons-link {
+    background-color: $footer-logo-color;
+    fill: $bgc-main;
+    
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+    }
+}

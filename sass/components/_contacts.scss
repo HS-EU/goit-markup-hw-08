@@ -1,0 +1,46 @@
+.contacts .link {
+    @include font-param(14px, 1.71, 500, 0.02em);
+    color: $secondary-color;
+    
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+
+
+.list.contacts {
+    margin-left: auto;
+}
+
+.icon-phone,
+.icon-envelope {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+.phone-set {
+    @include flex-center(inline-flex);
+    // display: inline-flex;
+    // align-items: center;
+    
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.mail-set {
+    @include flex-center(inline-flex);
+    // display: inline-flex;
+    // align-items: center;
+   
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+

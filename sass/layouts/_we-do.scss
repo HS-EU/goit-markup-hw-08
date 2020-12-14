@@ -1,0 +1,35 @@
+.we-do {
+    
+    @media screen and (max-width: #{$desktop - 1px}){
+        display: none;
+    }
+
+}
+
+.we-do .list {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.we-do-thumb {
+    position: relative;
+}
+
+.we-do-label {
+    position: absolute;
+    bottom: 0;
+    
+    @include flex-center(inline-flex);
+
+    height: 70px;
+    width: 100%;
+    margin: 0;
+    
+    @include font-param(14px, 1.14, 700);
+  
+    color: $bgc-main;
+    text-transform: uppercase;
+
+    background-color: rgba(47, 48, 58, 0.8);
+}

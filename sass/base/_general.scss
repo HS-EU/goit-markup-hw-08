@@ -1,0 +1,96 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    @include font-param(14px, 1.71);
+    background-color: $bgc-main;
+    color: $secondary-color;
+}
+
+.list {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+    color: $main-color;
+}
+
+h1, 
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    // background-color: lightsteelblue;
+    // background-color: goldenrod;
+    // outline: 1px solid darkblue;
+    
+    @media screen and (min-width: $mobile) {
+        width: $mobile;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: $tablet;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: $desktop;
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+    
+    footer & {
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+}
+    
+// .container-flex {
+//     display: flex;
+//     flex-direction: row;
+// }
+
+.section-title {
+    @include font-param(28px, 1.18, 700);
+    text-align: center;
+    color: $main-color;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $desktop) {
+        @include font-param(36px, 1.167, 700);
+        margin-bottom: 50px;
+    }
+} 
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+*{
+    outline: none;
+}

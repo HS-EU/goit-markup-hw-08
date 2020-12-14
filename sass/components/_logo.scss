@@ -1,0 +1,15 @@
+.logo {
+    font-family: "Raleway", sans-serif;
+    @include font-param(26px, 1.192, 700);
+    color: $accent-color;
+    
+    &.bgc-light {
+        color: $main-color;
+        margin-right: 0;
+    }
+    
+    &.bgc-dark {
+        color: $bgc-main;
+    }
+}   
+

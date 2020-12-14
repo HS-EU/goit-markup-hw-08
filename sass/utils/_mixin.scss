@@ -1,0 +1,18 @@
+@mixin transition($trans-property) {
+    transition-property: $trans-property;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin flex-center($flex-type) {
+    display: $flex-type;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin font-param($fs, $lh: 1.71, $fw: 400, $ls: 0.03em) {
+    font-size: $fs;
+    line-height: $lh;
+    font-weight: $fw;
+    letter-spacing: $ls;
+}

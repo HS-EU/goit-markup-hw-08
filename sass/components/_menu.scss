@@ -1,0 +1,124 @@
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.site-nav,
+.contacts {
+    display: none;
+}
+
+@media screen and (min-width: $tablet) {
+    .main-nav {
+        flex-grow: 0;
+    }
+    
+    .site-nav  {
+        display: flex;
+        align-items: center;
+    }
+    
+    header .logo.link {
+        margin-right: 88px;
+    }
+    
+    .contacts {
+        display: inline;
+    } 
+}
+
+@media screen and (min-width: $desktop) {
+    header .logo.link {
+        margin-right: 93px;
+    }
+    .contacts {
+        display: flex;
+    } 
+    .contacts .item:not(:first-child) {
+        margin-left: 30px;
+    }
+}
+
+
+.site-nav .item {
+    // position: relative;
+    
+    &:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+    
+.site-nav .link {
+    @include font-param(14px, 1.143, 500, 0.02em);
+    
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.link.current {
+    position: relative;
+    color: $accent-color;
+    
+    &::after {
+        position: absolute;
+        display: inline-block;
+        content: '';
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        bottom: -33px;
+        left: 0;
+        background-color: $accent-color;
+
+        @media screen and (max-width: #{$tablet - 1}){
+            bottom: -12px;
+        }
+    }
+}
+
+.mobile-menu-container {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    width: 100%;
+    
+    display: none;
+    background-color: $bgc-main;
+    text-align: center;
+    z-index: 10;
+    @include font-param(18px, 1.16, 500, 0.02em);
+    padding: 60px 0;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
+    &.is-open {
+        display: block;
+    }
+
+    & .list:not(:last-child) {
+        margin-bottom: 60px;
+    }
+}
+
+.mobile-site-nav .item:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.mobile-contacts .link {
+    color: $secondary-color;
+}
+
+.mobile-contacts .item:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.contacts-footer-list {
+    font-style: normal;
+
+    & li:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}

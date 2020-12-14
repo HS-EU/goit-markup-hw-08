@@ -1,0 +1,130 @@
+.modal-title {
+    display: block;
+    @include font-param(20px, 1.15, 700);
+    text-align: center;
+    margin-bottom: 12px;
+    color: $main-color;
+}
+
+.modal-label {
+    display: block;
+    @include font-param(12px, 1.17, 400, 0.01em);
+    margin-bottom: 4px;
+    color: $secondary-color;
+}
+
+.modal-input {
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    height: 40px;
+    padding: 12px 16px 12px 42px;
+    color: $accent-color;
+    
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: $accent-color;
+        outline: 1px solid $accent-color;
+    }
+}
+    
+.modal-input.comment {
+    height: 120px;
+    resize: none;
+    padding: 12px 16px;
+    @include font-param(14px, 1.17, 400, 0.01em);
+    color: $main-color;
+    margin-bottom: 20px;
+    
+    &::placeholder {
+        color: rgba(117, 117, 117, 0.5);
+    }
+}
+    
+.modal-label-agreement {
+    @include flex-center(flex);
+    margin-bottom: 30px;
+}
+
+.link-agreement {
+    color: $accent-color;
+    margin-left: 5px;
+}
+
+.modal-form .button {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 55px;
+    padding-left: 55px;
+}
+
+.field-form {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.input-icon {
+    position: absolute;
+    fill: $main-color;
+
+    left: 15px;
+    top: 28px;
+    
+    .modal-input:hover + & {
+        fill: $accent-color;
+    }
+}
+
+.checkbox {
+    appearance: none;
+    position: absolute;
+}
+
+.checkbox-icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $main-color;
+    border-radius: 4px;
+    margin-right: 8px;
+    
+    .checkbox:checked + & {
+        border-color: $accent-color;
+        background-color: $accent-color;
+        background-image: url(../images/checkicon.svg);
+        background-size: contain;
+        background-origin: border-box;
+    }
+}
+
+.icon-send {
+    margin-left: 10px;
+    fill: $bgc-main;
+}
+
+.subscribe {
+    margin-left: auto;
+    
+    &-label {
+        display: block;
+        margin-bottom: 20px;
+    }
+    
+    &-input {
+        height: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        padding: 15px 16px;
+        @include font-param(16px, 1.25);
+        background-color: transparent;
+        color: $footer-text-clr;
+        
+        &::placeholder {
+            @include font-param(16px, 1.25);
+            color: $footer-text-clr;
+        }
+    }
+}

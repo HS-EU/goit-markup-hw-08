@@ -1,0 +1,99 @@
+.advantages .container {
+    
+    
+    @media screen and (min-width: $desktop){
+        padding-bottom: 0;
+        // padding-top: 94px;
+    }
+}
+
+.advantages-list {
+
+    @media screen and (min-width: $tablet) and (max-width: #{$desktop - 1px})  {
+        margin: -15px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        margin: 0 -15px;
+    }
+}
+
+.advantages-list-item {
+    display: inline-block;
+    // outline: 1px solid maroon;
+    
+    &:not(:last-child) {
+        @media screen and (max-width: #{$tablet - 1px}) {
+        margin-bottom: 30px;
+    }
+
+    }
+    
+    @media screen and (min-width: $tablet) and (max-width: #{$desktop - 1px}) {
+        flex-basis: calc((100% - 4 * 15px) / 2);
+        margin: 15px;
+    }
+    
+    @media screen and (min-width: $desktop) {
+        flex-basis: calc((100% - 4 * 30px) / 4);
+        margin: 0 15px;       
+
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        height: 120px;
+        border-radius: 4px;
+        margin-bottom: 30px;
+        background-size: 70px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: $button-bgc-color;
+    }
+
+
+    &:nth-child(1)::before {
+        background-image: url(../images/antenna.svg);
+    }
+
+    &:nth-child(2)::before {
+        background-image: url(../images/clock.svg);
+    }
+
+    &:nth-child(3)::before {
+        background-image: url(../images/diagram.svg);
+    }
+
+    &:nth-child(4)::before {
+        background-image: url(../images/astronaut.svg);
+    }
+}
+
+.list-advantages {
+    @include font-param(14px, 1.143, 700);
+    text-transform: uppercase;
+    color: $main-color;
+    margin-bottom: 10px;
+    
+    @media screen and (max-width: #{$tablet - 1px}) {
+        text-align: center;
+    }
+}
+
+.list-desсription {
+    line-height: 1.714;
+    margin-bottom: 0;
+    
+    // &:not(last-child) {
+    //     margin-bottom: 0;
+    // }
+}
+
+.list-advantages {
+    margin-bottom: 10px;
+}
+
