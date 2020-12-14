@@ -1040,7 +1040,7 @@ footer .social-icons-link:hover, footer .social-icons-link:focus {
   }
 }
 
-.modal .modal-close-button {
+.modal-close-button {
   position: absolute;
   display: flex;
   align-items: center;
@@ -1054,7 +1054,7 @@ footer .social-icons-link:hover, footer .social-icons-link:focus {
   background: #ffffff;
 }
 
-.modal:hover, .modal:focus {
+.modal-close-button:hover, .modal-close-button:focus {
   fill: #2196F3;
 }
 

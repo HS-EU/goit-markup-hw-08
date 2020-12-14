@@ -12,7 +12,7 @@
     cursor: pointer;
     font-family: inherit;
     @include font-param(16px, 1.87, 700, 0.06em);
-   
+
     &:hover,
     &:focus {
         background-color: $accent-btn-hover;
@@ -28,7 +28,7 @@
     background-color: $button-bgc-color;
     font-family: inherit;
     @include font-param(16px, 1.62, 500);
-   
+
     &:hover,
     &:focus {
         background-color: $accent-color;
